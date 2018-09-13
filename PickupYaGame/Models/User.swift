@@ -6,18 +6,20 @@
 //  Copyright © 2018 SamWayne. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class User {
     let name: String
     let age: String
     let favoriteShoe: String
     let favoriteTeam: String
+    let profileImage: UIImage
     
-    init(name: String, age: String, favoriteShoe: String, favoriteTeam: String) {
+    init(name: String, age: String, favoriteShoe: String, favoriteTeam: String, profileImage: UIImage) {
         self.name = name
         self.age = age
         self.favoriteShoe = favoriteShoe
         self.favoriteTeam = favoriteTeam
+        self.profileImage = profileImage
     }
 }
