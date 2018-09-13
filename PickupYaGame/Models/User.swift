@@ -1,0 +1,23 @@
+//
+//  User.swift
+//  PickupYaGame
+//
+//  Created by Sam on 9/12/18.
+//  Copyright © 2018 SamWayne. All rights reserved.
+//
+
+import Foundation
+
+class User {
+    let name: String
+    let age: String
+    let favoriteShoe: String
+    let favoriteTeam: String
+    
+    init(name: String, age: String, favoriteShoe: String, favoriteTeam: String) {
+        self.name = name
+        self.age = age
+        self.favoriteShoe = favoriteShoe
+        self.favoriteTeam = favoriteTeam
+    }
+}
