@@ -1,5 +1,5 @@
 //
-//  EmailViewController.swift
+//  AuthViewController.swift
 //  PickupYaGame
 //
 //  Created by Sam on 9/18/18.
@@ -8,8 +8,9 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
-class EmailViewController: UIViewController {
+class AuthViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var SegmentControl: UISegmentedControl!
@@ -24,7 +25,11 @@ class EmailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func signInButtonTapped(_ sender: Any) {
-        // validation on email and password :(
+        
+        FirebaseManager.shared.setupFirebaseAuthSettings()
+        
+        // TODO: validation on email (existing email) and password (requirements) :(
+        
         guard let email = emailTF.text, !email.isEmpty,
             let password = passwordTF.text, !password.isEmpty else { return }
         if isSignIn {
@@ -43,7 +48,19 @@ class EmailViewController: UIViewController {
         } else {
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 if let error = error {
-                    print("There was an error creating new user with firebase \(error.localizedDescription)")
+                    print("There was an error creating new user \(error.localizedDescription)")
+                }
+                if let user = user {
+                    // segue into application
+                    navigationController?.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+                    func addUserToDatabase() {
+                        // i believe this to be setting child nodes for user, which are identifiable by their id, will set properties later in usercontroller
+                        var ref = FirebaseManager.shared.ref
+                        ref = Database.database().reference()
+                        ref?.child("users/\(user.user.uid)/username").setValue(user.user.uid)
+                    }
+                } else {
+                    print("Could not find valid user with firebase")
                 }
             }
         }
@@ -52,9 +69,9 @@ class EmailViewController: UIViewController {
     @IBAction func didChangeSegment(_ sender: Any) {
         isSignIn = !isSignIn
         if isSignIn {
-            signInButton.titleLabel?.text = "Sign in"
+            signInButton.setTitle("Sign in", for: .normal)
         } else {
-            signInButton.titleLabel?.text = "Sign up"
+            signInButton.setTitle("Sign up", for: .normal)
         }
     }
     
