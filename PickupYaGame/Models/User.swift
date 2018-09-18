@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class User {
     let name: String
@@ -14,12 +15,14 @@ class User {
     let favoriteShoe: String
     let favoriteTeam: String
     let profileImage: UIImage
+    let location: CLLocation
     
-    init(name: String, age: String, favoriteShoe: String, favoriteTeam: String, profileImage: UIImage) {
+    init(name: String, age: String, favoriteShoe: String, favoriteTeam: String, profileImage: UIImage, location: CLLocation) {
         self.name = name
         self.age = age
         self.favoriteShoe = favoriteShoe
         self.favoriteTeam = favoriteTeam
         self.profileImage = profileImage
+        self.location = location
     }
 }

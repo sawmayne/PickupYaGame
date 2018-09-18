@@ -9,5 +9,5 @@
 import Foundation
 
 class PickupGamesController {
-    func createNewGroup(name: String, court: String, 
+//    func createNewGroup(name: String, court: String, 
 }
