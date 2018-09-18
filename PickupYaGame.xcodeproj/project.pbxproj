@@ -18,6 +18,8 @@
 		900545B9214ACA490020284A /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900545B8214ACA490020284A /* ChatController.swift */; };
 		900545BB214ACA510020284A /* PickupGamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900545BA214ACA510020284A /* PickupGamesController.swift */; };
 		900545BD214ACD5F0020284A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 900545BC214ACD5F0020284A /* GoogleService-Info.plist */; };
+		90460A9A2151514600C48F53 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90460A992151514600C48F53 /* EmailViewController.swift */; };
+		90D238DA2150624300B2E93E /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90D238D92150624300B2E93E /* credentials.plist */; };
 		E6FD13C384627701351FE3FC /* Pods_PickupYaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124C3E5646BBD19A8063A15C /* Pods_PickupYaGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		900545B8214ACA490020284A /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		900545BA214ACA510020284A /* PickupGamesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupGamesController.swift; sourceTree = "<group>"; };
 		900545BC214ACD5F0020284A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		90460A992151514600C48F53 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		90D238D92150624300B2E93E /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		9D4D221D12998D5FB45B146F /* Pods-PickupYaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupYaGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PickupYaGame/Pods-PickupYaGame.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0CD2FCCFA52DDEA0D9CA1C /* Pods-PickupYaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupYaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-PickupYaGame/Pods-PickupYaGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +80,7 @@
 				9005459F2149BD690020284A /* Main.storyboard */,
 				900545B32149C5170020284A /* Models */,
 				900545B5214AC98A0020284A /* ModelControllers */,
+				90D238D82150596A00B2E93E /* ViewControllers */,
 				900545B42149C52A0020284A /* Resources */,
 			);
 			path = PickupYaGame;
@@ -94,6 +99,7 @@
 		900545B42149C52A0020284A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				90D238D92150624300B2E93E /* credentials.plist */,
 				9005459B2149BD690020284A /* AppDelegate.swift */,
 				900545BC214ACD5F0020284A /* GoogleService-Info.plist */,
 				900545A22149BD6B0020284A /* Assets.xcassets */,
@@ -111,6 +117,14 @@
 				900545BA214ACA510020284A /* PickupGamesController.swift */,
 			);
 			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		90D238D82150596A00B2E93E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				90460A992151514600C48F53 /* EmailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B1DA691C0283F94382A652EF /* Frameworks */ = {
@@ -192,6 +206,7 @@
 			files = (
 				900545A62149BD6B0020284A /* LaunchScreen.storyboard in Resources */,
 				900545BD214ACD5F0020284A /* GoogleService-Info.plist in Resources */,
+				90D238DA2150624300B2E93E /* credentials.plist in Resources */,
 				900545A32149BD6B0020284A /* Assets.xcassets in Resources */,
 				900545A12149BD690020284A /* Main.storyboard in Resources */,
 			);
@@ -205,8 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PickupYaGame/Pods-PickupYaGame-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -216,8 +229,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -235,15 +246,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PickupYaGame-checkManifestLockResult.txt",
 			);
@@ -262,6 +269,7 @@
 				900545B02149C45A0020284A /* Chat.swift in Sources */,
 				9005459C2149BD690020284A /* AppDelegate.swift in Sources */,
 				900545BB214ACA510020284A /* PickupGamesController.swift in Sources */,
+				90460A9A2151514600C48F53 /* EmailViewController.swift in Sources */,
 				900545B7214ACA400020284A /* UserController.swift in Sources */,
 				900545AE2149C3EE0020284A /* User.swift in Sources */,
 				900545B22149C4820020284A /* PickupGames.swift in Sources */,

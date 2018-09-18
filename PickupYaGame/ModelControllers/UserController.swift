@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import FirebaseAuth
+class UserController {
+    func setupFirebaseAuth(){
+        let actionCodeSettings = ActionCodeSettings()
+        actionCodeSettings.url = URL(string: "Test")
+        actionCodeSettings.handleCodeInApp = true
+        actionCodeSettings.setIOSBundleID("com.SamWayne.PickupYaGame")
+    }
+
+    func signUp(email: String) {
+        
+    }
+    //    func signup(
+    
+    // func signin(email: String, password: String) {
+}
