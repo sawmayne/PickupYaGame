@@ -6,8 +6,18 @@
 //  Copyright © 2018 SamWayne. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import Firebase
+import FirebaseDatabase
+
 
 class PickupGamesController {
-//    func createNewGroup(name: String, court: String, 
+    static let shared = PickupGamesController()
+    
+    var ref = FirebaseManager.shared.ref!
+    
+    func createNewGroup(name: String, court: String, courtImage: UIImage) {
+        ref = Database.database().reference()
+        self.ref.child("Group")
+    }
 }

@@ -547,10 +547,10 @@
             </objects>
             <point key="canvasLocation" x="2007" y="1045"/>
         </scene>
-        <!--Email View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="OXQ-Tv-nvV">
             <objects>
-                <viewController id="mKf-vM-mhL" customClass="EmailViewController" customModule="PickupYaGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mKf-vM-mhL" customClass="AuthViewController" customModule="PickupYaGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YMd-qd-i7N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -582,7 +582,7 @@
                                         </subviews>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vzV-Mg-igk">
-                                        <rect key="frame" x="131.5" y="91.5" width="112.5" height="29"/>
+                                        <rect key="frame" x="122" y="91.5" width="131" height="29"/>
                                         <segments>
                                             <segment title="Sign in"/>
                                             <segment title="Sign up"/>
@@ -645,7 +645,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-9f-KEd">
-                                <rect key="frame" x="131.5" y="271.5" width="112.5" height="29"/>
+                                <rect key="frame" x="122" y="271.5" width="131.5" height="29"/>
                                 <color key="backgroundColor" red="0.082352941176470587" green="0.49411764705882355" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Sign in">
@@ -653,6 +653,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signInButtonTapped:" destination="mKf-vM-mhL" eventType="touchUpInside" id="wwK-l7-GXc"/>
+                                    <segue destination="1N2-gf-hvl" kind="show" identifier="toTabBar" id="Z1c-Vg-cew"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -664,7 +665,7 @@
                             <constraint firstItem="gqz-ZH-LGV" firstAttribute="width" secondItem="YMd-qd-i7N" secondAttribute="width" multiplier="0.9" id="C94-XB-dQL"/>
                             <constraint firstItem="rqL-9f-KEd" firstAttribute="width" secondItem="vzV-Mg-igk" secondAttribute="width" id="Ujr-rW-5aM"/>
                             <constraint firstItem="LAl-9e-KeB" firstAttribute="centerX" secondItem="YMd-qd-i7N" secondAttribute="centerX" id="WBa-JM-pWR"/>
-                            <constraint firstItem="rqL-9f-KEd" firstAttribute="width" secondItem="gm7-HU-Y3N" secondAttribute="width" multiplier="0.3" id="WQe-eF-ydS"/>
+                            <constraint firstItem="rqL-9f-KEd" firstAttribute="width" secondItem="gm7-HU-Y3N" secondAttribute="width" multiplier="0.35" id="WQe-eF-ydS"/>
                             <constraint firstItem="gm7-HU-Y3N" firstAttribute="centerX" secondItem="YMd-qd-i7N" secondAttribute="centerX" id="dim-Qf-JqB"/>
                             <constraint firstItem="gm7-HU-Y3N" firstAttribute="width" secondItem="YMd-qd-i7N" secondAttribute="width" id="hqo-Tr-Rge"/>
                             <constraint firstItem="gqz-ZH-LGV" firstAttribute="height" secondItem="YMd-qd-i7N" secondAttribute="height" multiplier="0.1" id="rmj-fJ-lXI"/>
