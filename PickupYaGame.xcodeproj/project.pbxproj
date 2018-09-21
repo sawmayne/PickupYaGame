@@ -20,6 +20,11 @@
 		90460A9A2151514600C48F53 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90460A992151514600C48F53 /* AuthViewController.swift */; };
 		90460A9C2151706A00C48F53 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90460A9B2151706A00C48F53 /* FirebaseManager.swift */; };
 		90460A9E21517FA000C48F53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90460A9D21517FA000C48F53 /* GoogleService-Info.plist */; };
+		90460AA02151887200C48F53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90460A9F2151887200C48F53 /* ProfileViewController.swift */; };
+		90460AA22151887E00C48F53 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90460AA12151887E00C48F53 /* SwipeViewController.swift */; };
+		90460AA42151888500C48F53 /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90460AA32151888500C48F53 /* NewGroupViewController.swift */; };
+		90460AA62151888C00C48F53 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90460AA52151888C00C48F53 /* ChatViewController.swift */; };
+		90460AA8215188AB00C48F53 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90460AA7215188AB00C48F53 /* ChatListViewController.swift */; };
 		90D238DA2150624300B2E93E /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90D238D92150624300B2E93E /* credentials.plist */; };
 		E6FD13C384627701351FE3FC /* Pods_PickupYaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124C3E5646BBD19A8063A15C /* Pods_PickupYaGame.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +46,11 @@
 		90460A992151514600C48F53 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		90460A9B2151706A00C48F53 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		90460A9D21517FA000C48F53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		90460A9F2151887200C48F53 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		90460AA12151887E00C48F53 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		90460AA32151888500C48F53 /* NewGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
+		90460AA52151888C00C48F53 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		90460AA7215188AB00C48F53 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		90D238D92150624300B2E93E /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		9D4D221D12998D5FB45B146F /* Pods-PickupYaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupYaGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PickupYaGame/Pods-PickupYaGame.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0CD2FCCFA52DDEA0D9CA1C /* Pods-PickupYaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupYaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-PickupYaGame/Pods-PickupYaGame.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +135,12 @@
 		90D238D82150596A00B2E93E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				90460AA7215188AB00C48F53 /* ChatListViewController.swift */,
 				90460A992151514600C48F53 /* AuthViewController.swift */,
+				90460AA12151887E00C48F53 /* SwipeViewController.swift */,
+				90460AA32151888500C48F53 /* NewGroupViewController.swift */,
+				90460AA52151888C00C48F53 /* ChatViewController.swift */,
+				90460A9F2151887200C48F53 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -181,6 +196,7 @@
 				TargetAttributes = {
 					900545972149BD690020284A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -270,12 +286,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				900545B02149C45A0020284A /* Chat.swift in Sources */,
+				90460AA42151888500C48F53 /* NewGroupViewController.swift in Sources */,
 				9005459C2149BD690020284A /* AppDelegate.swift in Sources */,
+				90460AA02151887200C48F53 /* ProfileViewController.swift in Sources */,
+				90460AA8215188AB00C48F53 /* ChatListViewController.swift in Sources */,
 				900545BB214ACA510020284A /* PickupGamesController.swift in Sources */,
 				90460A9C2151706A00C48F53 /* FirebaseManager.swift in Sources */,
 				90460A9A2151514600C48F53 /* AuthViewController.swift in Sources */,
 				900545B7214ACA400020284A /* UserController.swift in Sources */,
 				900545AE2149C3EE0020284A /* User.swift in Sources */,
+				90460AA62151888C00C48F53 /* ChatViewController.swift in Sources */,
+				90460AA22151887E00C48F53 /* SwipeViewController.swift in Sources */,
 				900545B22149C4820020284A /* PickupGames.swift in Sources */,
 				900545B9214ACA490020284A /* ChatController.swift in Sources */,
 			);
@@ -431,7 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SamWayne.PickupYaGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -450,7 +471,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SamWayne.PickupYaGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
