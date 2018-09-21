@@ -12,12 +12,30 @@ import FirebaseDatabase
 
 
 class PickupGamesController {
+    
     static let shared = PickupGamesController()
     
-    var ref = FirebaseManager.shared.ref!
+    var rootRef = FirebaseManager.shared.rootRef
+    let groupRef = FirebaseManager.shared.rootRef.child("Groups")
     
-    func createNewGroup(name: String, court: String, courtImage: UIImage) {
-        ref = Database.database().reference()
-        self.ref.child("Group")
+    // Believe this could be used for both creation and editing 
+    func createNewGroup(name: String, court: String, courtImage: UIImage, meetingTimes: String) {
+        // Might have to serialize the image, since firebase has images as a URL/String
+        
+        let imageAsImage = UIImage(data: courtImage.jpegData(compressionQuality: 0.5)!)
+        let imageAsData =  imageAsImage?.jpegData(compressionQuality: 1.0)
+        
+        let uniqueRef = self.groupRef.childByAutoId()
+        let groupNameRef = uniqueRef.child("GroupName")
+        let groupCourtRef = uniqueRef.child("GroupCourt")
+        let courtImageRef = uniqueRef.child("CourtImage")
+        
+        groupRef.observe(.value) { (DataSnapshot) in
+            
+            groupNameRef.setValue(name)
+            groupCourtRef.setValue(court)
+            courtImageRef.setValue(imageAsData)
+            
+        }
     }
 }

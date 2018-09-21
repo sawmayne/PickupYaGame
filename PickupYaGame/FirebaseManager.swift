@@ -13,7 +13,7 @@ import FirebaseDatabase
 class FirebaseManager {
     static let shared = FirebaseManager()
     
-     var ref: DatabaseReference!
+     var rootRef = Database.database().reference()
     
     func setupFirebaseAuthSettings(){
         // dont actually know if this is needed

@@ -10,26 +10,20 @@ import UIKit
 
 class NewGroupViewController: UIViewController {
 
+    @IBOutlet weak var courtImage: UIImageView!
+    @IBOutlet weak var meetingDaysTF: UITextField!
+    @IBOutlet weak var groupNameTF: UITextField!
+    @IBOutlet weak var courtNameTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func createGroupTapped(_ sender: Any) {
+        guard let name = groupNameTF.text, !name.isEmpty,
+            let courtName = courtNameTF.text, !courtName.isEmpty,
+            let meetingTimes = meetingDaysTF.text, !meetingTimes.isEmpty
+            /*,let courtImage = courtImage */ else { return }
+        PickupGamesController.shared.createNewGroup(name: name, court: courtName, courtImage: UIImage(named: "ProfileIcon")!, meetingTimes: meetingTimes)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
