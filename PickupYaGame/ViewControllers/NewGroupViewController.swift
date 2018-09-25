@@ -24,6 +24,6 @@ class NewGroupViewController: UIViewController {
             let courtName = courtNameTF.text, !courtName.isEmpty,
             let meetingTimes = meetingDaysTF.text, !meetingTimes.isEmpty
             /*,let courtImage = courtImage */ else { return }
-        PickupGamesController.shared.createNewGroup(name: name, court: courtName, courtImage: UIImage(named: "ProfileIcon")!, meetingTimes: meetingTimes)
+        PickupGamesController.shared.createNewGroup(name: name, court: courtName, courtImage: UIImage(named: "ProfileIconSelected")!, meetingTimes: meetingTimes)
     }
 }

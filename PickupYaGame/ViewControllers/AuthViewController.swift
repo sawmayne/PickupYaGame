@@ -42,8 +42,8 @@ class AuthViewController: UIViewController {
                 let rootRef = FirebaseManager.shared.rootRef.child("Users").child(user.user.uid)
                 rootRef.updateChildValues(["Name" : "",
                                            "Image" : "",
-                                           "Favorite shoe" : "",
-                                           "Favorite team" : "",
+                                           "Favorite Shoe" : "",
+                                           "Favorite Team" : "",
                                            "Age" : ""] as [String: Any], withCompletionBlock: { (error, _) in
                                             if let error = error {
                                                 print("Error updating child values: \(error.localizedDescription)")
